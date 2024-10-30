@@ -1,40 +1,27 @@
 #include <iostream>
 #include <conio.h>
+
 using namespace std;
-void main()
 
+int main()
 {
+    cout << "Welcome to the ASCII to character converter" << endl;
+    cout << "You have up to 50 entries. (Press 'q' or 'Q' to quit at any time)" << endl << endl;
+    cout << "Written by Asep1582 (RaspingWheel22)" << endl;
 
-	cout<<"Welcome to the ASCii to character converter"<<endl;
-	cout<<"You have 10 entries. (50 character entries) "<<endl<<endl;
-	cout<<"Written by Asep1582 (RaspingWheel22)"<<endl;
-	cout<<"Press q or Q to quit"<<endl<<endl;
+    char ch;
+    int entryCount = 0; 
 
-	char ch;
-	cout<<"Enter a number/letter/special symbol:  "<<endl;
-	int k=0; 
-	do
-	{ 
+    do {
+        cout << "Enter a character: ";
+        ch = getch();
+        
+        cout << ch << " - ASCII: " << static_cast<int>(ch) << endl;
 
-		k++;
+        entryCount++;
+    } while (ch != 'q' && ch != 'Q' && entryCount < 50);
 
-		ch=getch();
+    cout << endl << "Thank you for using the converter!" << endl;
 
-	cout<<ch<<"  -  "<<(int) ch<<endl;
-
-
-
-		
-	} while (ch !='q' && ch!='Q' && k<50);
-
-
-
-
-
-
-
-
-
-
-cout<<endl<<endl<<endl;
+    return 0;
 }
